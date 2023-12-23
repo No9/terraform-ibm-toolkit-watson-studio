@@ -1,5 +1,11 @@
-provider "ibm" {
-  version = ">= 1.2.1"
+terraform {
+  required_providers {
+    ibm = {
+      source  = "IBM-Cloud/ibm"
+      version = "~>1.56.1"
+    }
+  }
+  required_version = ">=1.3"
 }
 
 resource null_resource print_values {
